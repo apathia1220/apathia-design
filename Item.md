@@ -8,3 +8,8 @@ npm install node-sass
 
 2、使用normalize.css初始化全局样式
 使用定义好的全局变量替换原有的写死的属性和颜色
+
+3、设计Button
+  不同的Button Type
+  不同的BUtton Size
+  Disabled状态
