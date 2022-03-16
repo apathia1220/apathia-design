@@ -13,3 +13,10 @@ npm install node-sass
   不同的Button Type
   不同的BUtton Size
   Disabled状态
+
+  组件测试：通用测试工具Jest测试（create-react-app内置）
+
+4、设计Menu
+  横向:1、不可下拉
+       2、可下拉
+  纵向：
