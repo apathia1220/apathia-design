@@ -8,7 +8,8 @@ export interface MenuProps {
     /**
      * defaultIndex:选中的menu的index
      * mode：menu的布局方向，水平或垂直
-     * onSelect：选中函数
+     * onSelect：选中回调函数
+     * defaultOpenSubMenus：垂直状态时，默认展开的subMenu
      */
     defaultIndex?: string;
     className?: string;

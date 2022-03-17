@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './components/Button/button'
+import Button from './components/Button/button';
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
 import SubMenu from './components/Menu/subMenu';
@@ -7,7 +7,7 @@ import SubMenu from './components/Menu/subMenu';
 function App() {
   return (
     <div className="App">
-      <Menu defaultIndex={'0'} mode={'vertical'} defaultOpenSubMenus={['3']} onSelect={(index) => { alert(index) }}>
+      <Menu defaultIndex={'0'} >
         <MenuItem >
           <div>1</div>
         </MenuItem>

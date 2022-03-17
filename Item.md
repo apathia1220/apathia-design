@@ -20,3 +20,7 @@ npm install node-sass
   横向:1、不可下拉
        2、可下拉
   纵向：
+
+5、Icon和Transition
+Transition包裹Button节点时，Button组件本身的动画会取代定义的Transition上的动画效果，导致丢失动画效果
+解决方案：在Transition中添加一个可选的props：wrapper，如果传入wrapper则在Transition中为子组件添加一个空节点

@@ -50,11 +50,11 @@
     }
   }
   .apathia-submenu {
-    display: none;
+    // display: none;
     list-style:none;
     padding-left: 0;
     white-space: nowrap;
-    transition: $menu-transition;
+    // transition: $menu-transition;
     .menu-item {
       padding: $menu-item-padding-y $menu-item-padding-x;
       cursor: pointer;
@@ -65,9 +65,10 @@
       }
     }
   }
-  .apathia-submenu.menu-opened {
-    display: block;
-  }
+  // .apathia-submenu.menu-opened {
+    //未采用csstransition动画之前控制下拉菜单的显示与隐藏
+  //   display: block;
+  // }
 }
 .menu-horizontal {
   >.menu-item {
