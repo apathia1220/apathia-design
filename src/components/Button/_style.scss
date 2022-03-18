@@ -25,21 +25,21 @@
     }
   }
 
-  .btn-lg {
+  .btn-size-lg {
     @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
   }
-  .btn-sm {
+  .btn-size-sm {
     @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
   }
   
-  .btn-primary {
+  .btn-type-primary {
     @include button-style($primary, $primary, $white)
   }
-  .btn-danger {
+  .btn-type-danger {
     @include button-style($danger, $danger, $white)
   }
   
-  .btn-default {
+  .btn-type-default {
     @include button-style($white, $gray-400, $body-color, $white, $primary, $primary)
   }
   

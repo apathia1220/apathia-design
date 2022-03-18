@@ -32,8 +32,8 @@ const Button: React.FC<ButtonProps> = (props) => {
         ...restProps
     } = props
     const classes = classNames('btn', {
-        [`btn-${btnType}`]: btnType,
-        [`btn-${size}`]: size,
+        [`btn-type-${btnType}`]: btnType,
+        [`btn-size-${size}`]: size,
         'disabled': (btnType === 'link') && disabled
     })
     if (btnType === 'link' && href) {
