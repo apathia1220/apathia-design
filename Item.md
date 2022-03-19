@@ -43,3 +43,9 @@ npm install node-sass
 9、upLoad
    上传文件也是有生命周期的
    start --> beforeUpdate --> onProgress --> onChange --> onSuccess or onError
+
+10、打包时，文件的上床路径读取方式不同会带来不同的问题，常用的是再用classic方式，本次需要使用node方式
+
+11、Module '"tapable"' has no exported member 'Tapable'
+    node_modules/@types/webpack/index.d.ts
+    在这个文件的引入的from 'tapable'前面加上from './tapable'

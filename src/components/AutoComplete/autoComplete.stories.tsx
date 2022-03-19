@@ -5,6 +5,26 @@ import AutoComplete, { DataSourceType } from './autoComplete'
 export default {
     title: 'AutoComplete',
     component: AutoComplete,
+    argTypes: {
+        fetchSuggestions: {
+            description: '返回推荐结果',
+            control: {
+                type: 'text'
+            }
+        },
+        onSelect: {
+            description: '选择选中某一项',
+            control: {
+                type: 'text'
+            }
+        },
+        renderOption: {
+            description: '自定义渲染样式',
+            control: {
+                type: 'text'
+            }
+        }
+    }
 } as ComponentMeta<typeof AutoComplete>
 
 const handleFetch = (query: string): DataSourceType[] | Promise<DataSourceType[]> => {

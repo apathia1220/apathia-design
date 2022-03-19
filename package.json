@@ -1,41 +1,49 @@
 {
   "name": "apathiadesign",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
+  "description": "React components library",
+  "author": "apathia",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "keywords": [
+    "Component",
+    "UI",
+    "React"
+  ],
+  "homepage": "https://github.com/apathia1220/apathia-design",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apathia1220/apathia-design"
+  },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.0",
     "@fortawesome/free-solid-svg-icons": "^6.1.0",
     "@fortawesome/react-fontawesome": "^0.1.18",
-    "@storybook/preset-create-react-app": "^4.1.0",
-    "@storybook/preset-scss": "^1.0.3",
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^12.1.4",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/classnames": "^2.3.1",
-    "@types/jest": "^27.4.1",
-    "@types/node": "^16.11.26",
-    "@types/react": "^17.0.40",
-    "@types/react-dom": "^17.0.13",
-    "@types/react-transition-group": "^4.4.4",
+    "@types/node": "*",
+    "@types/tapable": "*",
+    "@types/uglify-js": "*",
     "axios": "^0.26.1",
     "classname": "^0.0.0",
-    "node-sass": "^7.0.1",
-    "react": "^17.0.2",
-    "react-docgen-typescript-loader": "^3.7.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
     "react-transition-group": "^4.4.2",
-    "sb": "^6.4.19",
-    "typescript": "^4.6.2",
-    "web-vitals": "^2.1.4"
+    "rimraf": "^3.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && npm run build-ts && npm run build-css",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "build-ts": "tsc -p tsconfig.build.json",
+    "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -s public",
+    "prepublishOnly": "npm run build"
   },
   "eslintConfig": {
     "extends": [
@@ -63,9 +71,28 @@
     "@storybook/addon-links": "^6.4.19",
     "@storybook/builder-webpack5": "^6.4.19",
     "@storybook/manager-webpack5": "^6.4.19",
+    "@storybook/preset-create-react-app": "^4.1.0",
+    "@storybook/preset-scss": "^1.0.3",
     "@storybook/react": "^6.4.19",
     "@storybook/testing-library": "^0.0.9",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.4",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/classnames": "^2.3.1",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^16.11.26",
+    "@types/react": "^17.0.40",
+    "@types/react-dom": "^17.0.13",
+    "@types/react-transition-group": "^4.4.4",
     "babel-loader": "^8.2.3",
+    "node-sass": "^7.0.1",
+    "react": "^17.0.2",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0",
+    "sb": "^6.4.19",
+    "typescript": "^4.6.2",
+    "web-vitals": "^2.1.4",
     "webpack": "^5.70.0"
   }
 }
