@@ -1,6 +1,6 @@
 {
   "name": "apathiadesign",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React components library",
   "author": "apathia",
   "private": false,
@@ -13,7 +13,7 @@
     "UI",
     "React"
   ],
-  "homepage": "https://github.com/apathia1220/apathia-design",
+  "homepage": "http://www.apathia.club/",
   "repository": {
     "type": "git",
     "url": "https://github.com/apathia1220/apathia-design"
