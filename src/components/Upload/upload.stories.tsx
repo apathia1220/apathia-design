@@ -3,6 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import Upload from './upload'
 import Icon from '../Icon'
 import axios from 'axios'
+import Button from '../Button'
 
 export default {
     title: 'Upload',
@@ -23,11 +24,20 @@ const Template: ComponentStory<typeof Upload> = (args) => {
             // headers={{'X-Powered-By': 'vikingship'}}
             // accept=".jpg"
             // multiple
-            drag
+            // drag
         >
-            <Icon icon="upload" size="5x" theme="secondary" />
-            <br />
-            <p>Drag file over to upload</p>
+            {
+                args.drag ? (
+                    <>
+                        <Icon icon="upload" size="5x" theme="secondary" />
+                        <br></br>
+                        <p>Drag file over to upload</p>
+                    </>
+                ) : <Button>
+                        上传文件
+                </Button>
+            }
+            
         </Upload>
     )
 }

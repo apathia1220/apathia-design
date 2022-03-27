@@ -10,22 +10,17 @@ export default {
 } as ComponentMeta<typeof Tabs>
 
 const Template: ComponentStory<typeof Tabs> = (args) => (
-    <Tabs
-        onSelect={function noRefCheck() { }}
-    >
+    <Tabs {...args}>
         <TabsItem label="选项卡一">
             this is content one
-    </TabsItem>
+        </TabsItem>
         <TabsItem label="选项卡二">
             this is content two
-    </TabsItem>
+        </TabsItem>
         <TabsItem label="用户管理">
             this is content three
-    </TabsItem>
+        </TabsItem>
     </Tabs>
 )
 
 export const Primary = Template.bind({})
-
-Primary.args = {
-}

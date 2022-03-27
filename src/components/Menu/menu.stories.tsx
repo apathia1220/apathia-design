@@ -44,8 +44,7 @@ export default {
 } as ComponentMeta<typeof Menu>
 
 const Template: ComponentStory<typeof MenuItem> = (args) => (
-    <Menu {...args} defaultIndex={'0'} mode={'horizontal'} defaultOpenSubMenus={['0']}>
-
+    <Menu {...args} defaultIndex={'0'} defaultOpenSubMenus={['0']}>
         <MenuItem disabled>
             disabled
       </MenuItem>
