@@ -45,7 +45,7 @@ var Menu = function (props) {
 };
 Menu.defaultProps = {
     defaultIndex: '0',
-    mode: 'horizontal',
+    mode: 'vertical',
     defaultOpenSubMenus: []
 };
 export default Menu;
