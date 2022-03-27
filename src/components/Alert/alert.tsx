@@ -14,7 +14,7 @@ export interface AlertProps {
     customClose?: string;
     /** 关闭alert时触发的事件 */
     onClose?: (() => void);
-    /** 	类型 四种可选 针对四种不同的场景 */
+    /** 类型 四种可选 针对四种不同的场景 */
     type: AlertType;
 }
 
