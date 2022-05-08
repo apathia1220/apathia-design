@@ -159,7 +159,7 @@ export const Upload: FC<UploadProps> = (props) => {
             percent: 0,
             raw: file
         }
-        //setFileList([_file, ...fileList])
+        // setFileList([_file, ...fileList])
         // 更新显示列表，直接使用setFileList会导致没有办法获得前一个的信息
         setFileList(prevList => {
             return [_file, ...prevList]

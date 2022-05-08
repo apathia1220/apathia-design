@@ -4,6 +4,8 @@ import Upload from './upload'
 import Icon from '../Icon'
 import axios from 'axios'
 import Button from '../Button'
+import { resolve } from 'path'
+import { rejects } from 'assert/strict'
 
 export default {
     title: 'Upload',
@@ -11,6 +13,12 @@ export default {
 } as ComponentMeta<typeof Upload>
 
 const Template: ComponentStory<typeof Upload> = (args) => {
+    const filePromise = (file: File) => {
+        return new Promise<File>((resolve, reject) => {
+            console.log(file.name, file.type);
+            resolve(file)
+        })
+    }
     return (
         <Upload
             {...args}
@@ -18,13 +26,13 @@ const Template: ComponentStory<typeof Upload> = (args) => {
             // onChange={() => handleFileChange}
             // defaultFileList={defaultFileList}
             // onRemove={action('removed')}
-            // beforeUpload={filePromise}
-            // name="fileName"
-            // data={{ 'key': 'value' }}
-            // headers={{'X-Powered-By': 'vikingship'}}
-            // accept=".jpg"
-            // multiple
-            // drag
+            beforeUpload={filePromise}
+        // name="fileName"
+        // data={{ 'key': 'value' }}
+        // headers={{'X-Powered-By': 'vikingship'}}
+        // accept=".jpg"
+        // multiple
+        // drag
         >
             {
                 args.drag ? (
@@ -37,7 +45,7 @@ const Template: ComponentStory<typeof Upload> = (args) => {
                         上传文件
                 </Button>
             }
-            
+
         </Upload>
     )
 }
