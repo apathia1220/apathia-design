@@ -862,3 +862,43 @@ main {
   display: none; }
   .tabs-content.tabs-content-active {
     display: block; }
+
+.apathia-modal .modal-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #212529;
+  opacity: 0.3; }
+
+.apathia-modal .modal-wrap {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  width: 600px;
+  font-size: 24px;
+  border-radius: 5px;
+  background-color: #fff;
+  z-index: 10000; }
+  .apathia-modal .modal-wrap .modal-head {
+    padding: 0 0 0 20px;
+    height: 50px;
+    line-height: 50px;
+    color: black;
+    border-bottom: 1px solid #dee2e6; }
+    .apathia-modal .modal-wrap .modal-head .modal-close-button {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      font-size: 30px;
+      cursor: pointer; }
+  .apathia-modal .modal-wrap .modal-content {
+    padding: 20px; }
+  .apathia-modal .modal-wrap .modal-footer {
+    width: 100%;
+    text-align: right; }
+    .apathia-modal .modal-wrap .modal-footer button {
+      margin: 5px 5px; }

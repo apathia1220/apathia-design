@@ -113,7 +113,7 @@ export var Upload = function (props) {
             percent: 0,
             raw: file
         };
-        //setFileList([_file, ...fileList])
+        // setFileList([_file, ...fileList])
         // 更新显示列表，直接使用setFileList会导致没有办法获得前一个的信息
         setFileList(function (prevList) {
             return __spreadArray([_file], prevList, true);

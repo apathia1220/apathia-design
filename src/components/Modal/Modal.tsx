@@ -92,25 +92,26 @@ const Modal: React.FC<ModalProps> = (props) => {
             )
     }
     
-    return ReactDOM.createPortal(
+    return visible? ReactDOM.createPortal(
             <div className={ modalClass }>
                 <div className="modal-mask" ref={maskRef} onClick={closeable ? onCancel : () => { }}/>
-            <div className="modal-wrap">
-                <div className="modal-head">
-                        { renderCloseIcon() }
-                    <div className="modal-title">{ title }</div>
-                </div>
-                <div className="modal-content">
-                    { children }
-                </div>
-                <div className="modal-footer">
-                    {
-                        renderFooter()
-                    }
+                <div className="modal-wrap">
+                    <div className="modal-head">
+                            { renderCloseIcon() }
+                        <div className="modal-title">{ title }</div>
+                    </div>
+                    <div className="modal-content">
+                        { children }
+                    </div>
+                    <div className="modal-footer">
+                        {
+                            renderFooter()
+                        }
+                    </div>
                 </div>
             </div>
-        </div>
-        ,document.querySelector('body') as HTMLBodyElement)
+        , document.querySelector('body') as HTMLBodyElement)
+        : null
 }
 
 export default Modal
